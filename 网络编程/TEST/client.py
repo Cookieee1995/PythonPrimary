@@ -14,7 +14,7 @@ while True:
     # 发
     cmd_message = input('>>> ').strip()
     if cmd_message == 'quit':break
-    if not cmd_message:break
+    if not cmd_message:continue
     client.send(cmd_message.encode(utf_8))
 
     # 收
