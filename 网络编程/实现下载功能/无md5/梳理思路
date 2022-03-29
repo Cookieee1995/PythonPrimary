@@ -1,0 +1,17 @@
+下载：
+根据绝对路径，从服务端找出要下载的文件，发到客户端
+
+在服务端打开文件，发送文件内容到客户端，客户端收到内容并创建文件写入内容
+
+先制作报头
+    文件名在绝对路径之后，os.path.basename(filename)
+    文件大小：os.
+header_dict = {'filename':os.path.basename(filename),'file_size':,'md5':''}
+
+发送报头长度
+发报头
+服务端读的方式打开文件，并循环发送内容
+with open(filename,'rb') as f:
+    for line in f:
+        server.send(line)
+
